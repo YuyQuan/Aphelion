@@ -3,8 +3,8 @@
 *.suo
 *.opensdf
 *.sdf
-*.filters
-*.user
+*.vcxproj.filters
+*.vcxproj.user
 
 # Build Directories
 
