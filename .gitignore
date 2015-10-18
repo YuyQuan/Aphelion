@@ -1,6 +1,12 @@
 # Visual Studio Files
 
 *.suo
+*.opensdf
 *.sdf
 *.vcxproj.filters
 *.vcxproj.user
+
+# Build Directories
+
+[Bb]in/
+[Tt]emp/
