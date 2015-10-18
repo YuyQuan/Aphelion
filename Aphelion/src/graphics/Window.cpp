@@ -27,19 +27,25 @@ namespace aphelion
 				return false;
 			}
 
-			//glewExpiremental = true;
+			glewExperimental = true;
 			  
-			//if(glewInit() != GLEW_OK) {
-			//	utilities::logError("Failed to initialize OpenGL!\n");
-			//	
-			//	return false;
-			//}
+			if(glewInit() != GLEW_OK) {
+				utilities::logError("Failed to initialize OpenGL!\n");
+				
+				return false;
+			}
 			  
 			utilities::logWarning("OpenGL %s\n", glGetString(GL_VERSION));
 			
 			m_isOpen = true;
 
 			return true;
+		}
+
+		void Window::Clear(const float red, const float green, const float blue)
+		{
+			glClearColor(red, green, blue, 1.0f);
+			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		}
 
 		void Window::Update()
@@ -49,9 +55,6 @@ namespace aphelion
 
 		void Window::Display()
 		{
-			glClearColor(0.0f, 0.25f, 0.5f, 1.0f);
-			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
 			PlatformDisplay();
 		}
 

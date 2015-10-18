@@ -14,7 +14,8 @@ namespace aphelion
 			virtual ~Window();
 
 			bool Create(const char* pTitle, const int width, const int height);
-
+			
+			void Clear(const float red, const float green, const float blue);
 			void Update();
 			void Display();
 			void Destroy();
