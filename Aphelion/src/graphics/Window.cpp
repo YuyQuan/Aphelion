@@ -24,8 +24,6 @@ namespace aphelion
 			m_height = height;
 
 			if(!PlatformInitialize()) {
-				utilities::logError("Failed to create the window!\n");
-
 				return false;
 			}
 

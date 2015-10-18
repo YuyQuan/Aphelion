@@ -17,7 +17,5 @@ int main(int argc, char* argv[])
 
 	window->Destroy();
 
-	system("PAUSE");
-
 	return 0;
 }
